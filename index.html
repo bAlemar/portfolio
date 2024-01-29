@@ -36,9 +36,11 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Habilidades</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#Projetos">Projetos</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experiência</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Formação</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Habilidades</a></li>
+         
                 <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li> -->
             </ul>
@@ -112,24 +114,40 @@
         </section>
 
         <hr class="m-0" />
-        <section class="resume-section" id="interests">
+        <section class="resume-section" id="Projetos">
             <div class="resume-section-content">
                 <h2 class="mb-5">Projetos</h2>
+                <!-- FRAUD DETECTION -->
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
                         <h3 class="mb-2 ">Detecção de Fraude de Crédito</h3>
-                        <p>O contexto de transações de cartão de crédito fradulentas conta com uma base de dados extramamente desbalanceada. Sabe-se que milhões de transações de crédito são feitas por dia e apenas alguma são fraudulentas.  
+                        <div class="subheading mb-3"><a href="https://github.com/bAlemar/Fraud-Detection" target="_blank">Link do Projeto</a></div>
+                        <p>Sabe-se que milhões de transações de crédito são feitas diariamente, sendo apenas algumas delas são fraudulentas.As fraudes, apesar de sua ocorrência relativamente baixa, podem gerar prejuízos enormes para as instituições financeiras.
 
-                            Nesse contexto, esse dataset  de 2 dias de transações e conta com 30 variáveis sendo 28 vindas de um processo de PCA devido a questões de LGPD. Apenas 2 variáveis conseguimos interpretas que são Variável (‘Time’) que está em segundos e Variável ‘Amount” que é valor da transação. 
-                            
-                            Devido à falta de informações das variáveis utilizei a correlação(Pearson) e teste de hipóteses(T-test e U-test) para extrair as variáveis que mais ajudassem a prever as classes fradulentas... Entretanto, não houve grandes diferenças no resultado com a utilização de todas as variáveis. 
-                            
-                            O modelo utilizado foi de Random Forest no seu padrão default que permitiu um modelo com F1-Score de 90% e seleção de variáveis utilizando Correlação de Pearson. Dessa maneira o modelo conseguiu prever cerca de  80 fraudes de 95. Além disso, apenas “pertubou” 2 clientes que foram os únicos falsos positivos. </p>
+                            Essa problemática pode ser resolvida utilizando modelos de aprendizado de máquina. Esses modelos conseguem, a partir de informações específicas de cada transação, prever se a transação será fraudulenta ou não.</p>
                             <span class="d-none d-lg-block text-center"><img class="img-fluid mx-auto mb-2 image-fraud"
                                 src="assets/img/fraude_credito.jpg" alt="..." /></span>
-                            <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and
-                            television shows, I am an aspiring chef, and I spend a large amount of my free time
-                            exploring the latest technology advancements in the front-end web development world.</p>    
+                        <p class="mb-0"> O modelo conseguiu prever cerca de 80 fraudes de 95, ou seja, diminuindo cerca de 84% das fraudes. Vale destacar que houve apenas 2 detecções falsas o que contribui ainda mais para economia de gastos da instituições financeira.</p>    
+                    </div>
+                </div>
+                <!-- MODELO DO TCC -->
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-2 ">Previsão do Índice Ibovespa</h3>
+                        <div class="subheading mb-3"><a href="https://github.com/bAlemar/Prevendo-Movimento-do-Ibovespa" target="_blank">Link do Projeto</a></div>
+                        <p> O mercado financeiro é afetado diariamente por fatores econômicos, culturais, políticos e aleatórios (catástrofes naturais). Diante dessa grande variação, prever a direção futura do mercado torna-se uma tarefa de extrema dificuldade. Nesse cenário, técnicas estatísticas e matemáticas são comumente utilizadas para previsão de mercado.</p>
+                        <p>Diante dessas técnicas, os modelos de aprendizado de máquina se apresentam como uma das principais ferramentas utilizadas na literatura de predição de movimento de mercados. Neste estudo, foi utilizado o método Random Forest e Support Vector Machine.</p>     
+                        <span class="d-none d-lg-block text-center"><img class="img-fluid mx-auto mb-2 image-fraud"
+                            src="assets/img/Retorno_SVM.png" alt="..." /></span>
+                    
+                        <p class="mb-0"> O modelo conseguiu superar o retorno do Ibovespa no Longo Prazo, com a utilização de técnicas modernas de validação de modelo e feature engineer. Com apenas a utilização de 8 variáveis independentes o modelo de SVM alcançou um acurácia de 54% e um ROC AUC de 53,5%.</p>    
+                    </div>
+                </div>
+                <!-- Outros -->
+                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="flex-grow-1">
+                        <h3 class="mb-2 ">Outros projetos, encontrar no meu Github... </h3>
+                        <div class="subheading mb-3"><a href="https://github.com/bAlemar?tab=repositories" target="_blank">Repositório</a></div>
                     </div>
                 </div>
         </section>
@@ -249,7 +267,7 @@
         <hr class="m-0" />
         <!-- Interests-->
         <!-- Awards-->
-        <section class="resume-section" id="awards">
+        <!-- <section class="resume-section" id="awards">
             <div class="resume-section-content">
                 <h2 class="mb-5">Awards & Certifications</h2>
                 <ul class="fa-ul mb-0">
@@ -293,7 +311,7 @@
                     </li>
                 </ul>
             </div>
-        </section>
+        </section> -->
     </div>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
